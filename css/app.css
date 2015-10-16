@@ -1,0 +1,7 @@
+/* overrides */
+.content .table-view { margin: 0 !important; }
+ul, code {font-size: 14px; color: #777;}
+
+.actions-list {
+  font-size: 1em;
+}

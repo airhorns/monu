@@ -15,7 +15,7 @@ require('fix-path')()
 var Server = require('electron-rpc/server')
 var app = new Server()
 
-var opts = {dir: __dirname, icon: path.join(__dirname, 'images', 'Icon.png')}
+var opts = {dir: __dirname, icon: path.join(__dirname, 'images', 'Icon.png'), width: 1000, height: 1200}
 var menu = menubar(opts)
 var conf
 
@@ -41,6 +41,7 @@ menu.on('ready', function ready () {
 
   menu.on('show', function show () {
     app.configure(menu.window.webContents)
+    menu.window.openDevTools();
     app.send('show')
   })
 

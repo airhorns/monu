@@ -106,7 +106,7 @@ function getAndRenderAll (callback) {
 
 function renderAll (data) {
   data = data || []
-  var obj = {items: data, hasProcesses: data.length > 0}
+  var obj = {stacks: [{name: "Shopify", items: data, hasProcesses: data.length > 0}, {name: "Starscream", items: [], hasProcesses: false}]}
   state.configure.set(obj)
 }
 
